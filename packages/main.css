@@ -110,3 +110,26 @@ main {
 #footer_main {
     margin-top: 20px;
 }
+
+@media (min-width: 40rem){
+    main {
+ 
+      margin: 3rem auto;
+      max-width: 1500px;
+    }
+}    
+
+
+@media (min-width: 1500px){
+    .packages_1 {
+        border-left: 4px solid #0e4f1f;
+    }
+
+    .packages_1:hover,
+    .package_1:active {
+    
+    border-right-color: #ff5454 ;
+    }
+
+
+}    
