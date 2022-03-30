@@ -2,14 +2,27 @@
   box-sizing: border-box;
 }
 
+html {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   margin: 0;
+  display: grid;
+  grid-template-rows:3.5rem auto fit-content(8rem);
+  grid-template-areas:"header"
+                      "main"
+                      "footer" ;
+  /* padding-top: 3.5rem; */
+  height: 100%;
 }
 
 main {
-  min-height: calc(100vh - 3.5rem - 8rem);
-  margin-top: 3.5rem;
+  /* min-height: calc(100vh - 3.5rem - 8rem); */
+  /* margin-top: 3.5rem; */
+  grid-row: 2/3;
+  grid-area: main;
 }
 
 .backdrop {
@@ -308,4 +321,13 @@ main {
 
 .plan__feature{
   margin: 8px 0;
+}
+
+
+.main-footer {
+  background: black;
+ padding:32px ;
+ margin-top: 48px;
+ /* grid-row: 2/3; */
+ grid-area: footer;
 }
