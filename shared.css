@@ -25,17 +25,6 @@ main {
   grid-area: main;
 }
 
-.backdrop {
-  position: fixed;
-  display: none;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
-}
-
 .main-header {
   width: 100%;
   position: fixed;
@@ -116,12 +105,17 @@ main {
   border-bottom: 5px solid white;
 }
 
+.main-nav__item--cta {
+   animation: wiggle 400ms 3s 8 ease-out none;
+}
+
 .main-nav__item--cta a,
 .mobile-nav__item--cta a {
   color: white;
   background: #ff1b68;
   padding: 0.5rem 1rem;
   border-radius: 8px;
+  
 }
 
 .main-nav__item--cta a:hover,
@@ -332,4 +326,18 @@ main {
  margin-top: 48px;
  /* grid-row: 2/3; */
  grid-area: footer;
+}
+
+@keyframes wiggle {
+  0% {
+     transform: rotateZ(0);
+     
+  }
+  50% {
+    transform: rotateZ(-10deg);
+    
+ }
+  100% {
+     transform: rotateZ(10deg);
+  }
 }
